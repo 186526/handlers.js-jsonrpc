@@ -8,8 +8,6 @@ import * as v2 from "./v2";
 const useResponse = (response: handlersJS.response<any>) => {
 	response.headers.set("Content-Type", "application/json; charset=utf-8");
 	response.status = 200;
-
-	console.log(response);
 };
 
 export default class JSONRPCRouter<
