@@ -1,0 +1,34 @@
+{
+    "name": "handlers.js-jsonrpc",
+    "description": "Handlers.js JSONRPC is a router that's make a jsonrpc interface controller for Handlers.js.",
+    "files": [
+        "dist",
+        "LICENSE"
+    ],
+    "author": "186526 <i@186526.xyz>",
+    "license": "MIT",
+    "devDependencies": {
+        "@types/jest": "^29.5.12",
+        "handlers.js": "^0.1.1-2",
+        "typescript": "^5.4.3"
+    },
+    "scripts": {
+        "tsc": "tsc",
+        "prepublish": "yarn tsc"
+    },
+    "main": "./dist/index.js",
+    "module": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "sideEffects": false,
+    "type": "module",
+    "version": "0.0.1",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/186526/handlers.js-jsonrpc"
+    },
+    "keywords": [
+        "jsonrpc",
+        "server",
+        "handlers.js"
+    ]
+}
