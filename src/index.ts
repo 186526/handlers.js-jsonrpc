@@ -20,7 +20,7 @@ export default class JSONRPCRouter<
 	errorMessage = string,
 	errorData = any
 > extends router<K, V> {
-	private rpcHandlers: {
+	protected rpcHandlers: {
 		[key in methods]: handler<
 			params,
 			result,
@@ -160,11 +160,13 @@ export default class JSONRPCRouter<
 		return response;
 	};
 
-	mount(path: path[] = ["/jsonrpc", "/jsonrpc/v2"]): this {
+	mountJSONRPC(path: path[] = ["/jsonrpc", "/jsonrpc/v2"]): this {
 		path.forEach((k) =>
 			this.binding(k, new handlersJS.handler("ANY", [this.v2RPCresponder]))
 		);
 
 		return this;
 	}
+
+	mount = this.mountJSONRPC;
 }
