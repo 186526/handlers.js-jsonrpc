@@ -1,6 +1,5 @@
 import { router, route } from "handlers.js";
 import * as handlersJS from "handlers.js";
-import { handler } from "./index.d";
 import { path, responder } from "handlers.js/dist/src/interface";
 
 import * as v2 from "./v2";
@@ -170,3 +169,17 @@ export default class JSONRPCRouter<
 
 	mount = this.mountJSONRPC;
 }
+
+export declare type handler<
+	params = any,
+	result = any,
+	errorCode = number,
+	errorMessage = string,
+	errorData = any
+> = (
+	params?: params
+) =>
+	| result
+	| Promise<result>
+	| v2.errorDetails<errorCode, errorMessage, errorData>
+	| Promise<v2.errorDetails<errorCode, errorMessage, errorData>>;

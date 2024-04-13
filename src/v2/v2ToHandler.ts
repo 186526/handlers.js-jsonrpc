@@ -1,11 +1,11 @@
-import { handler } from "../index.d";
+import { handler } from "../index";
 
 import request from "./request";
 import response from "./response";
 import responseError from "./responseError";
 
 const v2ToHandler = (
-	handler: handler<any,any,any,any,any>
+	handler: handler<any, any, any, any, any>
 ): ((request: request) => Promise<response>) => {
 	return async (request: request): Promise<response> => {
 		let params = request.params,
