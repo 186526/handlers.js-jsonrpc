@@ -10,10 +10,11 @@
     "devDependencies": {
         "@types/jest": "^29.5.12",
         "handlers.js": "^0.1.1-2",
+        "tsc-alias": "^1.8.10",
         "typescript": "^5.4.3"
     },
     "scripts": {
-        "tsc": "tsc",
+        "tsc": "tsc && tsc-alias",
         "prepublish": "yarn tsc"
     },
     "main": "./dist/index.js",
@@ -21,7 +22,7 @@
     "types": "./dist/index.d.ts",
     "sideEffects": false,
     "type": "module",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "repository": {
         "type": "git",
         "url": "https://github.com/186526/handlers.js-jsonrpc"

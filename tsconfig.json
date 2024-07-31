@@ -36,5 +36,9 @@
         "src/**/*.ts",
         "demo/**/*.ts"
     ],
+    "tsc-alias": {
+        "resolveFullPaths": true,
+        "verbose": true
+    }
     // "esm": true
 }
